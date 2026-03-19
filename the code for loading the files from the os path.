@@ -1,0 +1,34 @@
+import pandas as pd
+from sqlalchemy
+import create engine
+import os
+import urllib.parse
+folder_path = r'' # the folder path in url
+try:
+  contracts_path = os.path.join(folder_path, 'contracts_eae.csv') # as an example I am using this kind of files
+  meteo_path = os.path.join(folder_path, 'meteo_eae.csv') # as an example I am using this kind of files
+  zipcode_path = os.path.join(folder_path, 'zipcode_eae.csv') # as an example I am using this kind of files
+
+  contracts = pd.read_csv(contracts_path, sep=None, engine = 'python') # with no seperator like comma,space,dash etc and pd.read_csv works well with python engine than c.
+  meteo_path = pd.read_csv(meteo_path, sep=None, engine = 'python')
+  zipcode_path = pd.read_csv(zipcode_path, sep=None,engine = 'python')
+
+  print(f'successfully loaded files')
+  print(f'contracts_shape : {contracts.shape}')
+  print(f'meteo_shape : {meteo.shape}')
+  print(f'zipcode_shape : {zipcode.shape}')
+except exception as e:
+  print(f'unknown file error cannot load the file {e}')
+
+# this step is used to visualize the tables 
+print(contracts.head(100))
+print(contracts.columns.Tolist())
+print(contracts.isnull().sum())
+print(meteo.head(100))
+print(meteo.columns.Tolist())
+print(meteo.isnull.sum())
+print(zipcode.head(100))
+print(zipcode.columns.Tolist())
+print(zipcode.isnull.sum())
+
+  
