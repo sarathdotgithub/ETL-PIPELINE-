@@ -15,18 +15,18 @@ try:
   print(f'contracts_shape : {contracts.shape}')
   print(f'meteo_shape : {meteo.shape}')
   print(f'zipcode_shape : {zipcode.shape}')
-except exception as e:
+except Exception as e:
   print(f'unknown file error cannot load the file {e}')
 
 # this step is used to visualize the tables 
 print(contracts.head(100))
-print(contracts.columns.Tolist())
+print(contracts.columns.tolist())
 print(contracts.isnull().sum())
 print(meteo.head(100))
-print(meteo.columns.Tolist())
-print(meteo.isnull.sum())
+print(meteo.columns.tolist())
+print(meteo.isnull().sum())
 print(zipcode.head(100))
-print(zipcode.columns.Tolist())
-print(zipcode.isnull.sum())
+print(zipcode.columns.tolist())
+print(zipcode.isnull().sum())
 
   
