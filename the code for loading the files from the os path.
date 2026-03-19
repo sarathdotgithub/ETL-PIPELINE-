@@ -8,8 +8,8 @@ try:
   zipcode_path = os.path.join(folder_path, 'zipcode_eae.csv') # as an example I am using this kind of files
 
   contracts = pd.read_csv(contracts_path, sep=None, engine = 'python') # with no seperator like comma,space,dash etc and pd.read_csv works well with python engine than c.
-  meteo_path = pd.read_csv(meteo_path, sep=None, engine = 'python')
-  zipcode_path = pd.read_csv(zipcode_path, sep=None,engine = 'python')
+  meteo = pd.read_csv(meteo_path, sep=None, engine = 'python')
+  zipcode = pd.read_csv(zipcode_path, sep=None,engine = 'python')
 
   print(f'successfully loaded files')
   print(f'contracts_shape : {contracts.shape}')
